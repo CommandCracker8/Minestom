@@ -53,6 +53,8 @@ interface Particles {
 
     Particle EXPLOSION = ParticleImpl.get("minecraft:explosion");
 
+    Particle SONIC_BOOM = ParticleImpl.get("minecraft:sonic_boom");
+
     Particle FALLING_DUST = ParticleImpl.get("minecraft:falling_dust");
 
     Particle FIREWORK = ParticleImpl.get("minecraft:firework");
@@ -188,6 +190,4 @@ interface Particles {
     Particle SCRAPE = ParticleImpl.get("minecraft:scrape");
 
     Particle SHRIEK = ParticleImpl.get("minecraft:shriek");
-
-    Particle ALLAY_DUST = ParticleImpl.get("minecraft:allay_dust");
 }
