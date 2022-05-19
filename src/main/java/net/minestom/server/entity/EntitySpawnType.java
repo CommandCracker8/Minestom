@@ -1,15 +1,11 @@
 package net.minestom.server.entity;
 
-import net.minestom.server.coordinate.Point;
 import net.minestom.server.coordinate.Pos;
-import net.minestom.server.coordinate.Vec;
 import net.minestom.server.entity.metadata.ObjectDataProvider;
 import net.minestom.server.entity.metadata.other.ExperienceOrbMeta;
-import net.minestom.server.entity.metadata.other.PaintingMeta;
 import net.minestom.server.network.packet.server.ServerPacket;
 import net.minestom.server.network.packet.server.play.SpawnEntityPacket;
 import net.minestom.server.network.packet.server.play.SpawnExperienceOrbPacket;
-import net.minestom.server.network.packet.server.play.SpawnPaintingPacket;
 import net.minestom.server.network.packet.server.play.SpawnPlayerPacket;
 
 public enum EntitySpawnType {
@@ -42,7 +38,8 @@ public enum EntitySpawnType {
     PAINTING {
         @Override
         public ServerPacket getSpawnPacket(Entity entity) {
-            int motive = 0;
+            return EntitySpawnType.basicEntity(entity);
+           /* int motive = 0;
             Point position = Vec.ZERO;
             byte direction = 0;
             if (entity.getEntityMeta() instanceof PaintingMeta paintingMeta) {
@@ -60,7 +57,7 @@ public enum EntitySpawnType {
                     default -> 0;
                 };
             }
-            return new SpawnPaintingPacket(entity.getEntityId(), entity.getUuid(), motive, position, direction);
+            return new SpawnPaintingPacket(entity.getEntityId(), entity.getUuid(), motive, position, direction);*/
         }
     };
 
