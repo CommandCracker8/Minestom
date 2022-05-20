@@ -598,8 +598,6 @@ public abstract class Instance implements Block.Getter, Block.Setter,
 
     /**
      * Sets the instance alias.
-     *
-     * @return the instance alias
      */
     public void setAlias(String alias) {
         this.alias = alias;
