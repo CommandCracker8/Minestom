@@ -601,7 +601,7 @@ public abstract class Instance implements Block.Getter, Block.Setter,
      *
      * @return the instance alias
      */
-    public @NotNull String setAlias(String alias) {
+    public void setAlias(String alias) {
         this.alias = alias;
     }
 
